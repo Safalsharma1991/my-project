@@ -1,0 +1,17 @@
+﻿@model MGMSample.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+@Html.Label("Enter UserName")
+@Html.TextBoxFor(model => model.UserName)
+<br />
+@Html.Label("Enter Password")
+@Html.PasswordFor(model => model.Password)
+<br />
+<input type="submit" value="Signin"/>
+}
+

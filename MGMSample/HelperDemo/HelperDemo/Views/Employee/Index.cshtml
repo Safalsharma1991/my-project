@@ -1,0 +1,20 @@
+﻿@model HelperDemo.Models.Employee
+
+@using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+{
+    @Html.Label("Enter Employee No")
+    @Html.TextBoxFor(m => m.Eno)
+    <br />
+    @Html.Label("Enter Employee Name")
+    @Html.TextBoxFor(m => m.Ename)
+    <br />
+    @Html.Label("Enter Employee Salary")
+    @Html.TextBoxFor(m => m.Esal)
+    <br />
+    <input type="submit" value="Save" />
+    <br />
+    <h1> Da is @ViewBag.da</h1>
+    <h1> HRA is @ViewBag.hra</h1>
+    <h1> Total Salary is @ViewBag.gross</h1>
+
+}

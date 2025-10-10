@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dotnet code practice\\HelperDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|c:\\dotnet code practice\\helperdemo\\helperdemo\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|solutionrelative:helperdemo\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|c:\\dotnet code practice\\helperdemo\\helperdemo\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|solutionrelative:helperdemo\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|c:\\dotnet code practice\\helperdemo\\helperdemo\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|solutionrelative:helperdemo\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|c:\\dotnet code practice\\helperdemo\\helperdemo\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09F3157A-C142-403C-B9EF-697AF01FCF1E}|HelperDemo\\HelperDemo.csproj|solutionrelative:helperdemo\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "HelperDemo\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "HelperDemo\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:30:06.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "HelperDemo\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "HelperDemo\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T04:20:27.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "HelperDemo\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "HelperDemo\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:18:49.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "HelperDemo\\Models\\Employee.cs",
+              "ToolTip": "C:\\dotnet code practice\\HelperDemo\\HelperDemo\\Models\\Employee.cs",
+              "RelativeToolTip": "HelperDemo\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:17:38.03Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

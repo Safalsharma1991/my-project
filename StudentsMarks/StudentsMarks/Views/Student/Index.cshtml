@@ -1,0 +1,26 @@
+﻿@model StudentsMarks.Models.Student
+
+@using (Html.BeginForm("Index", "Student", FormMethod.Post))
+{
+    @Html.Label("Enter Student No")
+    @Html.TextBoxFor(m => m.Sno)
+    <br />
+    @Html.Label("Enter Student Name")
+    @Html.TextBoxFor(m => m.Sname)
+    <br />
+    @Html.Label("Enter Marks 1")
+    @Html.TextBoxFor(m => m.Marks1)
+    <br />
+    @Html.Label("Enter Marks 2")
+    @Html.TextBoxFor(m => m.Marks2)
+    <br />
+    @Html.Label("Enter Marks 3")
+    @Html.TextBoxFor(m => m.Marks3)
+    <br />
+    <input type="submit" value="Display" />
+    <br />
+    <h1> Total is @ViewBag.total</h1>
+    <h1> Percentage is @ViewBag.percentage</h1>
+    <h1> Grade is @ViewBag.grade</h1>
+
+}

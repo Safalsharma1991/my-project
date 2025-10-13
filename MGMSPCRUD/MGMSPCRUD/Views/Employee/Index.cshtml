@@ -1,0 +1,44 @@
+﻿@model MGMSPCRUD.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+{
+    @Html.LabelFor(model => Model.Eno);
+    @Html.TextBoxFor(model => Model.Eno);
+    <br />
+    @Html.LabelFor(model => Model.Ename);
+    @Html.TextBoxFor(model => Model.Ename);
+    <br />
+    @Html.LabelFor(model => Model.Salary);
+    @Html.TextBoxFor(model => Model.Salary);
+    <br />
+    <input type="submit" value="Save" name ="b1" />
+    <input type="submit" value="Update" name="b1"/>
+    <table>
+        <tr>
+            <td>Eno</td>
+            <td>Ename</td>
+            <td>Salary</td>
+        </tr>
+
+        @foreach (var item in TempData["emps"] as List<MGMSPCRUD.Models.Employee>)
+        {
+            <tr>
+                <td> @item.Eno</td>
+                <td> @item.Ename</td>
+                <td> @item.Salary</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { eno = item.Eno })</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = item.Eno })</td>
+            </tr>
+        }
+
+
+    </table>
+    <br />
+
+}
+
+

@@ -1,0 +1,39 @@
+﻿@model MVCCrud.Models.Employee
+
+
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+    {
+@Html.Label("Enter Eno")
+@Html.TextBoxFor(model => model.Eno)
+<br />
+@Html.Label("Enter Ename")
+@Html.TextBoxFor(model => model.Ename)
+<br />
+@Html.Label("Enter Salary")
+@Html.TextBoxFor(model => model.Salary)
+<br />
+<input type="submit" value="Save" /> 
+
+<br />
+<table>
+    <tr>
+        <td> Eno</td>
+        <td> Ename</td>
+        <td> Salary</td>
+    </tr>
+    @foreach (var item in TempData["empdb"] as List<MVCCrud.Models.Employee>)
+    {
+        <tr>
+            <td>@item.Eno</td>
+            <td>@item.Ename</td>
+            <td>@item.Salary</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { eno = item.Eno })</td>
+
+        </tr>
+    }
+</table>
+}
+

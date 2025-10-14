@@ -1,0 +1,43 @@
+﻿@model MGMDFA.Models.Employee
+
+
+
+<h2>MyGoMinds</h2>
+@using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+{
+    @Html.LabelFor(modal => modal.empId)
+    @Html.TextBoxFor(modal => modal.empId)
+    <br />
+
+    @Html.LabelFor(modal => modal.empName)
+    @Html.TextBoxFor(modal => modal.empName)
+    <br />
+
+
+    @Html.LabelFor(modal => modal.salary)
+    @Html.TextBoxFor(modal => modal.salary)
+    <br />
+
+    <input type="submit" value="Save" />
+    <br />
+    <table>
+        <tr>
+            <td>Eno</td>
+            <td>Ename</td>
+            <td>Salary</td>
+        </tr>
+        @foreach(var item in TempData["ie"] as List<MGMDFA.Models.Employee>)
+                {
+                    <tr>
+                        <td> @item.empId</td>
+                        <td> @item.empName</td>
+                        <td> @item.salary</td>
+                        <td> @Html.ActionLink("Delete","Delete",new {Id= item.empId})</td>
+                    </tr>
+                }
+    </table>
+
+
+
+}
+

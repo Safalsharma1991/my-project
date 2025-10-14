@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="safaldatabase2025Entities-Web.config Connection String" description="safaldatabase2025Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.EmpModel.csdl|res://*/Models.EmpModel.ssdl|res://*/Models.EmpModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=safalsharmadatabase2025.database.windows.net;initial catalog=safaldatabase2025;user id=admin1234;password=safalsharma2025@;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\dotnet\ code\ practice\\MGMDFA\\MGMDFA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='safaldatabase2025Entities']/@connectionString" />
+  </parameter>
+</parameters>

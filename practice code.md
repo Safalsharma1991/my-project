@@ -3567,3 +3567,172 @@ public void ProcessPayment(double amt)
 
 
 
+class A
+{
+public void Show()
+{
+Console.WriteLine("I am show");
+}
+public void Display()
+{
+Console.WriteLine("I am display");
+}
+
+
+}
+
+class Program
+{
+static void Main()
+{
+A a = new A();
+a.Show();
+a.Display();
+}
+}
+
+Factory Method
+
+
+Any Method that will return the object is factory method
+
+class A
+{
+public void Show()
+{
+Console.WriteLine("I am show");
+}
+}
+
+class X
+{
+public static A getObject()
+{
+return new A();
+}
+}
+
+class Program
+{
+static void Main()
+{
+A a1 = X.getObject();
+a1.Show()
+}
+}
+
+
+
+
+class HomeController:Controller
+{
+[Httpget]
+public ActionResult Index()
+{
+return View();
+}
+
+[Httpget]
+public ActionResult Index(Models.Employee emp)
+{
+return View();
+}
+
+}
+
+class Employee
+{
+public int Eno {set;get;}
+public string Ename{set;get;}
+public double Salary{set;get;}
+
+}
+
+
+
+class A
+{
+B b = new B();
+}
+class B
+{
+C c = new C();
+}
+class C
+{
+}
+
+class Program
+{
+static void Main()
+{
+A a = new A();
+}
+}
+
+class HomeController:Controller
+{
+ServiceLayer sl = new Servicelayer();
+}
+
+class ServiceLayer
+{
+Repolayer rl = new Repolayer();
+
+}
+class Repolayer
+{
+SqlConnection sl = new SqlConnection();
+}
+
+class Program
+{
+
+static void Main()
+{
+
+HomeController hc = new HomeController();
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

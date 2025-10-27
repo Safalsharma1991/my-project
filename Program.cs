@@ -1,26 +1,27 @@
-﻿using MgmDIDemo;
-using Microsoft.Extensions.DependencyInjection;
-class Program
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
 {
-    static void Main(string[] args)
-    {
-        // Setup DI
-        var serviceProvider = new ServiceCollection()
-            .AddTransient<IMilk, CowMilk>()
-            .AddTransient<ISugar, WhiteSugar>()
-            .AddTransient<CoffeeMachine>()
-            .BuildServiceProvider();
-        
-        // Resolve CoffeeMachine
-        var coffeeMachine = serviceProvider.GetService<CoffeeMachine>();
-        // Make coffee
-        if (coffeeMachine != null)
-        {
-            coffeeMachine.MakeCoffee();
-        }
-        else
-        {
-            Console.WriteLine("Failed to resolve CoffeeMachine from DI container.");
-        }
-    }
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

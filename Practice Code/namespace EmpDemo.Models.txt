@@ -1,0 +1,117 @@
+namespace EmpDemo.Models
+{
+    public class Employee
+    {
+        public int Eno { get; set; }
+        public string Ename { get; set; }
+
+        public double Bsal { get; set; }
+        public double  Da { get; set; }
+        public  double  Hra { get; set; }
+
+        public double  Tsal { get; set; }
+    }
+}
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Employee}/{action=Index}/{id?}");
+
+app.Run();
+
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace EmpDemo.Controllers
+{
+    public class EmployeeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(Models.Employee employee)
+        {
+            ViewBag.Da = employee.Bsal * 0.4;
+            ViewBag.Hra = employee.Bsal * 0.2;
+            ViewBag.Tsal = employee.Bsal + employee.Da + employee.Hra;
+            return View();
+        }
+    }
+}
+
+
+@model EmpDemo.Models.Employee
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Eno" class="control-label"></label>
+                <input asp-for="Eno" class="form-control" />
+                <span asp-validation-for="Eno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ename" class="control-label"></label>
+                <input asp-for="Ename" class="form-control" />
+                <span asp-validation-for="Ename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsal" class="control-label"></label>
+                <input asp-for="Bsal" class="form-control" />
+                <span asp-validation-for="Bsal" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <h3> Da is @ViewBag.Da</h3>
+    <h3> Hra is @ViewBag.Hra</h3>
+    <h3> Total is @ViewBag.Tsal</h3>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

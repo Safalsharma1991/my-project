@@ -1,11 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using SafalCrud.Models;
+using MgmCroeCrud2.Repo;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<EmpDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("getcon")));
+builder.Services.AddScoped<EmpRepo>();
 
 var app = builder.Build();
 
@@ -26,6 +25,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Employee}/{action=Create}/{id?}");
+    pattern: "{controller=Emp}/{action=Index}/{id?}");
 
 app.Run();

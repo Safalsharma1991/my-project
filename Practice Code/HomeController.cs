@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FirstMVCapp.Controllers
+namespace MGMMVCDemo.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,10 +12,6 @@ namespace FirstMVCapp.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-        public ActionResult GetCourse()
-        {
-                       return View();   
         }
     }
 }

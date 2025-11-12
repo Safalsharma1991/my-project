@@ -1,30 +1,32 @@
-using MgmCroeCrud2.Repo;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<EmpRepo>();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace MGMExtensionDemo
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    class A
+    {
+        public void Show() {
+            Console.WriteLine("I am show");
+                }
+    }
+
+    static class B
+    {
+        public static void Display(this A a)
+        {
+            Console.WriteLine("I am  display");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+                A a = new A();
+                a.Show();
+                a.Display();
+        }
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Emp}/{action=Index}/{id?}");
-
-app.Run();

@@ -1,32 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleApp1;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace MGMExtensionDemo
+class Program
 {
-    class A
+    public static void Main(string[] args)
     {
-        public void Show() {
-            Console.WriteLine("I am show");
-                }
-    }
+        var services = new ServiceCollection();
+        services.AddTransient<IMilk, CowMilk>();
+        services.AddTransient<ISugar, BrownSugar>();
+        services.AddTransient<CoffeeMachine>();
+        var serviceProvider = services.BuildServiceProvider();
+        var coffeeMachine = serviceProvider.GetRequiredService<CoffeeMachine>();
+        coffeeMachine.MakeCoffee();
 
-    static class B
-    {
-        public static void Display(this A a)
-        {
-            Console.WriteLine("I am  display");
-        }
-    }
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-                A a = new A();
-                a.Show();
-                a.Display();
-        }
+
     }
 }

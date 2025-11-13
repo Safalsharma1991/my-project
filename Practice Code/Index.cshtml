@@ -1,19 +1,37 @@
-﻿@model MGMMVCDemo.Models.Employee
+﻿@model MGMMVCSP.Models.Employee
 
 @using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+
 {
     @Html.Label("Enter Eno")
-    @Html.TextBoxFor(models => models.Eno)
+    @Html.TextBoxFor(m => m.Eno)
     <br />
 
     @Html.Label("Enter Ename")
-    @Html.TextBoxFor(models => models.Ename)
+    @Html.TextBoxFor(m => m.Ename)
     <br />
 
     @Html.Label("Enter Salary")
-    @Html.TextBoxFor(models => models.Salary)
+    @Html.TextBoxFor(m => m.Salary)
     <br />
     <input type="submit" value="Save" />
+    <br />
+    <table>
+        <tr>
+            <td>Eno</td>
+            <td>Ename</td>
+            <td>Salary</td>
+
+        </tr>
+
+        @foreach (var item in TempData["emp"] as List<MGMMVCSP.Models.Employee>)
+        {
+            <tr>
+                <td>@item.Eno</td>
+                <td>@item.Ename</td>
+                <td>@item.Salary</td>
+            </tr>
+        }
+    </table>
+
 }
-
-

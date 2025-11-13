@@ -1,11 +1,10 @@
-﻿using MGMMVCDemo.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MGMMVCDemo.Controllers
+namespace MGMMVCSP.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -13,13 +12,9 @@ namespace MGMMVCDemo.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Index(Employee employee)
-        {
-            empRepo.SaveEmployee(employee);
+            List<Models.Employee> emps = empRepo.GetEmployee(new Models.Employee());
+            TempData["emps"] = emps;
+            TempData.Keep("emps");
             return View();
         }
     }

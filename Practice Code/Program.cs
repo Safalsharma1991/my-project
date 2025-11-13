@@ -9,16 +9,19 @@ namespace MGMGeneric
 {
     internal class Program
     {
+        static void print(int x)
+        {
+        Console.WriteLine(x);
+        }
+            static void print(string x)
+            { System.Console.WriteLine(x); }
+        static void print(double x) { System.Console.WriteLine(x); }
+
         static void Main(string[] args)
         {
-            ArrayList ar = new ArrayList();
-            ar.Add(10);
-            ar.Add("MyGoMinds");
-            ar.Add(2.5); ar.Add(true);
-            foreach (var i in ar)
-            {
-                Console.WriteLine(i);
-            }
+            Program.print(10);
+            Program.print("Safal");
+            Program.print(10.23);
         }
     }
 }

@@ -1,23 +1,20 @@
-﻿using MGMApi.Services;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MGMApi.Controllers
+namespace ProductWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IProductService _productService;
-
-        public ProductController(IProductService productService)
+        public readonly Repo.IProductRepo _productRepo;
+        public ProductController(Repo.IProductRepo productRepo)
         {
-            _productService = productService;
+            _productRepo = productRepo;
         }
 
         [HttpGet]
-
-        public List<Models.Product> GetProducts() => _productService.GetAll();
+        public List<Models.Product> Get() => _productRepo.GetAllProducts();
 
     }
 }
